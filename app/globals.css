@@ -1,26 +1,175 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand colors */
+  --color-primary: #423428;
+  --color-primary-light: #776C61;
+  --color-black: #4B331F;
+  --color-beige: #F7F2E5;
+  --color-beige-secondary: #F4EDD3;
+
+  /* Semantic colors */
+  --background: #F7F2E5;
+  --foreground: #4B331F;
+  --primary-foreground: #F7F2E5;
+  --muted: #E5E5E2;
+  --muted-foreground: #6B7280;
+  --border: #D4D4D1;
+  --radius: 1rem;
 }
 
 @theme inline {
+  /* Brand colors */
+  --color-primary: #423428;
+  --color-primary-light: #776C61;
+  --color-black: #4B331F;
+  --color-beige: #F7F2E5;
+  --color-beige-secondary: #F4EDD3;
+
+  /* Semantic colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --font-sans: var(--font-manrope);
+  --font-heading: var(--font-unbounded);
+  --radius-lg: var(--radius);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-beige);
+  color: var(--color-primary);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  line-height: 0.8;
+}
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1;
+}
+
+/* Force line-height 100% for all headings and text elements */
+h1, h2, h3, h4, h5, h6, p, span, a, li, label, button {
+  line-height: 1;
+}
+
+/* Accordion animation */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Заголовок секции */
+.title-section {
+  font-size: 28px;
+  font-family: var(--font-unbounded);
+  text-transform: uppercase;
+}
+
+/* Маленький подзаголовок */
+.subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Основной текст */
+.text-body {
+  font-size: 16px;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .text-body {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-body {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .title-section {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .text-body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .text-body {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .title-section {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .text-body {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .title-section {
+    font-size: 56px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .text-body {
+    font-size: 26px;
+  }
+
+  .title-section {
+    font-size: 64px;
+  }
+}
+
+/* Hide scrollbar for touch sliders */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
