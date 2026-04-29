@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { ArrowLeft } from "lucide-react";
 import { Footer } from "@/components/sections/Footer";
 
@@ -32,22 +33,17 @@ export default function BookingPage() {
               </p>
             </div>
 
-            {/* EasyWeek через iframe */}
-
-<div className="w-full 2xl overflow-hidden bg-white">
-
-  <iframe
-    src="https://kvartira-14.booknow.ru/"
-    className="w-full h-[800px] md:h-[900px] border-0"
-    title="Бронирование Квартира 14"
-    loading="lazy"
-  />
-
-</div>
-
-            <p className="text-center text-sm text-muted-foreground mt-6">
-              Замените URL виджета на ваш EasyWeek или другой сервис бронирования
-            </p>
+            <Script
+              src="https://booking.booknow.ru/widget.js"
+              strategy="afterInteractive"
+            />
+            <div className="w-full flex justify-center">
+              <iframe
+                src="https://booking.booknow.ru/kvartira-14"
+                className="w-full max-w-[900px] h-[700px] border-0"
+                referrerPolicy="origin"
+              />
+            </div>
           </div>
         </section>
       </main>

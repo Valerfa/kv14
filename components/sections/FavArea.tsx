@@ -13,22 +13,22 @@ export function FavArea() {
               / Проёмы
             </p>
 
-            <div className="col-start-4 col-span-9 text-left lg:col-start-4 lg:col-span-6 lg:text-center">
-              <p className="text-body">
+            <div className="col-start-4 col-span-9 text-left lg:contents">
+              <p className="text-body lg:col-start-4 lg:col-span-6 lg:text-center">
                   Одно из самых любимых мест в студии — пространство с проёмами, где взгляд мягко уходит вглубь. Здесь появляется ощущение ритма и воздуха.
               </p>
 
-              <div className="my-2">
+              <div className="my-2 lg:col-start-5 lg:col-span-4 mb-6">
                 <Image
                   src="/images/image2.jpg"
                   alt="Пространство с проёмами в студии"
                   width={1200}
                   height={900}
-                  className="w-full h-[300px] object-cover lg"
+                  className="w-full h-[400px] lg:h-[600px] object-cover"
                 />
               </div>
 
-              <p className="text-body">
+              <p className="text-body lg:col-start-4 lg:col-span-6 lg:text-center">
                 Это место, в котором не нужно искать композицию. Она уже есть.
               </p>
             </div>
