@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import { Footer } from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
@@ -12,18 +11,18 @@ export default function RulesPage() {
   return (
     <>
       <main className="flex-1">
-        <section className="py-8 md:py-12">
-          <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[1600px] 2xl:mx-auto">
+        <section className="py-8 md:py-12 px-4 md:px-0">
+          <div className="max-w-[1200px] mx-auto w-full">
+            <div className="pt-20">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-sm text-primary-light hover:text-primary transition-colors mb-6"
+              className="inline-block mb-6 text-body cursor-pointer hover:opacity-70 transition-opacity"
             >
-              <ArrowLeft className="w-4 h-4" />
-              На главную
+              ← На главную
             </Link>
-            <h1 className="title-section text-left md:text-center mb-8">Правила студии</h1>
+            <h1 className="title-section mb-8 text-left md:text-center">Правила студии</h1>
 
-            <div className="space-y-4 text-left">
+            <div className="text-body space-y-4 text-left">
                 <p className="text-body">
                   Данный свод правил является кратким, носит информационный характер и не заменяет собой{" "}
                   <Link href="/offer" className="underline underline-offset-4 decoration-1 decoration-primary/60 hover:decoration-primary transition-all">
@@ -99,6 +98,7 @@ export default function RulesPage() {
                 <p className="text-body">
                   Чистая запись звука в помещениях Фотостудии не гарантируется.
                 </p>
+            </div>
             </div>
           </div>
         </section>

@@ -13,8 +13,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="footer" className="py-8 lg:py-12 bg-primary text-beige">
-      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[1600px] 2xl:mx-auto">
+    <footer id="footer" className="bg-primary text-beige">
+      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-24 my-6 md:my-8 lg:my-10 xl:my-12 2xl:my-16">
         <FadeIn>
           {/* Desktop layout */}
           <div className="hidden md:grid md:grid-cols-3 md:gap-8 md:items-start mb-10">
@@ -48,51 +48,54 @@ export function Footer() {
             </div>
 
             {/* 2. Контакты */}
-            <div className="space-y-3">
-              <div className="text-body uppercase mb-3 text-beige">Контакты</div>
+            <div className="flex flex-col gap-8">
+              <div className="text-footer uppercase mb-3 text-beige">Контакты</div>
               <div>
-                <p className="text-xs uppercase tracking-widest mb-1 text-beige/60">Телефон</p>
-                <p className="text-body">+7 (904) 251-66-91</p>
+                <p className="text-footer uppercase tracking-widest mb-1 text-beige/60">Телефон</p>
+                <p className="text-footer">+7 (904) 251-66-91</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-widest mb-1 text-beige/60">VK</p>
+                <p className="text-footer uppercase tracking-widest mb-1 text-beige/60">VK</p>
                 <a
-                  href="https://t.me/studio"
+                  href="https://vk.com/kvartira.014"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-body hover:text-beige/80 transition-colors"
+                  className="text-footer hover:text-beige/80 transition-colors"
                 >
-                  @studio
+                  https://vk.com/kvartira.014
                 </a>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-widest mb-1 text-beige/60">Instagram</p>
+                <p className="text-footer uppercase tracking-widest mb-1 text-beige/60">Instagram</p>
                 <a
                   href="https://www.instagram.com/kvartira.014"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-body hover:text-beige/80 transition-colors"
+                  className="text-footer hover:text-beige/80 transition-colors"
                 >
-                  @studio
+                  @kvartira.014
                 </a>
+                <p className="w-1/2 text-[clamp(9px,0.9vw,24px)] text-primary-light mt-4">
+                *Социальная сеть Instagram принадлежит Meta Platforms Inc., деятельность которой признана экстремистской и запрещена на территории РФ.
+                </p>
               </div>
             </div>
 
             {/* 3. Адрес */}
             <div>
-              <div className="text-body uppercase mb-3 text-beige">Адрес</div>
-              <p className="text-body">г. Владимир, ул. Ильича, д. 4</p>
-              <p className="text-body text-beige/60">(за Торговыми рядами)</p>
+              <div className="text-footer uppercase mb-8 text-beige">Адрес</div>
+              <p className="text-footer">г. Владимир, ул. Ильича, д. 4</p>
+              <p className="text-footer text-beige/60">(за Торговыми рядами)</p>
             
 
 
-            <div className="text-body uppercase mb-3 mt-8 text-beige">Документы</div>
+            <div className="text-footer uppercase mb-8 mt-8 text-beige">Документы</div>
               <div className="flex flex-col items-start gap-3">
                 {footerLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-sm text-beige/60 hover:text-beige transition-colors text-left underline underline-offset-1 hover:opacity-80"
+                    className="text-footer text-beige/60 hover:text-beige transition-colors text-left underline underline-offset-1 hover:opacity-80"
                   >
                     {link.label}
                   </Link>
@@ -129,40 +132,40 @@ export function Footer() {
             </Link>
             
             <div>
-              <p className="text-body">г. Владимир, ул. Ильича, д. 4</p>
-              <p className="text-body text-beige/60">(за Торговыми рядами)</p>
+              <p className="text-footer">г. Владимир, ул. Ильича, д. 4</p>
+              <p className="text-footer text-beige/60">(за Торговыми рядами)</p>
             </div>
             
             <div className="space-y-3">
               <div>
-                <p className="text-xs uppercase mb-1 text-beige/60">Телефон</p>
-                <p className="text-body">+7 (904) 251-66-91</p>
+                <p className="text-footer uppercase mb-1 text-beige/60">Телефон</p>
+                <p className="text-footer">+7 (904) 251-66-91</p>
               </div>
               <div>
-                <p className="text-xs uppercase mb-1 text-beige/60">VK</p>
+                <p className="text-footer uppercase mb-1 text-beige/60">VK</p>
                 <a
                   href="https://t.me/studio"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-body hover:text-beige/80 transition-colors"
+                  className="text-footer hover:text-beige/80 transition-colors"
                 >
                   @studio
                 </a>
               </div>
               <div>
-                <p className="text-xs uppercase mb-1 text-beige/60">Instagram</p>
+                <p className="text-footer uppercase mb-1 text-beige/60">Instagram</p>
                 <a
-                  href="https://instagram.com/studio"
+                  href="https://instagram.com/kvartira.014"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-body hover:text-beige/80 transition-colors"
+                  className="text-footer hover:text-beige/80 transition-colors"
                 >
                   @kvartira.014
                 </a>
               </div>
             </div>
             
-            <p className="text-[9px] text-beige/60 leading-relaxed w-1/2">
+            <p className="text-[clamp(9px,0.9vw,24px)] text-beige/60 leading-relaxed w-1/2">
               *Социальная сеть Instagram принадлежит Meta Platforms Inc., деятельность которой признана экстремистской и запрещена на территории РФ.
             </p>
             <div className="flex flex-col items-start gap-4 text-left md:items-start">
@@ -170,7 +173,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-beige/60 hover:text-beige transition-colors text-left underline underline-offset-1 hover:opacity-80"
+                  className="text-footer text-beige/60 hover:text-beige transition-colors text-left underline underline-offset-1 hover:opacity-80"
                 >
                   {link.label}
                 </Link>
@@ -179,11 +182,11 @@ export function Footer() {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-beige/20 mb-4" />
+          <div className="border-t 2xl:border-t-2 border-beige/20 mb-4" />
 
           {/* Bottom row */}
           <div className="text-left">
-            <p className="text-sm text-beige/80 text-left">
+            <p className="text-footer text-beige/80 text-left">
               © Квартира 14, {currentYear}. Все права защищены
             </p>
             

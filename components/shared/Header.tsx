@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MenuOverlay } from "@/components/shared/MenuOverlay";
@@ -15,7 +16,12 @@ const navLinks = [
 export function Header() {
   const [activeOverlay, setActiveOverlay] = useState<"menu" | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
   const isOverlayOpen = activeOverlay !== null;
+  const isDocsPage =
+    pathname === "/rules" ||
+    pathname === "/privacy" ||
+    pathname === "/offer";
 
   useEffect(() => {
     document.body.style.overflow = isOverlayOpen ? "hidden" : "";
@@ -35,11 +41,13 @@ export function Header() {
   }, []);
 
   const close = () => setActiveOverlay(null);
-  const headerTextClass = isOverlayOpen
-    ? "text-beige"
-    : isScrolled
-      ? "text-primary"
-      : "text-beige";
+  const headerTextClass = isDocsPage
+    ? "text-primary"
+    : isOverlayOpen
+      ? "text-beige"
+      : isScrolled
+        ? "text-primary"
+        : "text-beige";
 
   return (
     <>
@@ -66,7 +74,7 @@ export function Header() {
               viewBox="0 0 81 68"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-auto md:h-8"
+              className="h-[clamp(28px,3vw,72px)] w-auto"
               aria-hidden="true"
             >
               <path
@@ -84,11 +92,11 @@ export function Header() {
             </svg>
             </Link>
 
-            <div className="ml-auto flex items-center gap-4">
+            <div className="ml-auto flex items-center gap-4 2xl:gap-8">
               <Link
                 href="/booking"
                 onClick={close}
-                className={`text-sm font-medium underline underline-offset-4 hover:opacity-75 uppercase transition-colors duration-300 ${headerTextClass}`}
+                className={`text-[clamp(14px,1.2vw,32px)]  font-medium underline underline-offset-4 hover:opacity-75 uppercase transition-colors duration-300 ${headerTextClass}`}
               >
                 Забронировать
               </Link>
@@ -112,7 +120,10 @@ export function Header() {
                       transition={{ duration: 0.2 }}
                       className="inline-flex"
                     >
-                      <X className="size-6 md:size-7" strokeWidth={1.5} />
+                      <X
+                        className="w-[clamp(20px,2vw,64px)] h-[clamp(20px,2vw,64px)]"
+                        strokeWidth={1.5}
+                      />
                     </motion.span>
                   ) : (
                     <motion.span
@@ -123,7 +134,10 @@ export function Header() {
                       transition={{ duration: 0.2 }}
                       className="inline-flex"
                     >
-                      <Menu className="size-6 md:size-7" strokeWidth={1.5} />
+                      <Menu
+                        className="w-[clamp(20px,2vw,64px)] h-[clamp(20px,2vw,64px)]"
+                        strokeWidth={1.5}
+                      />
                     </motion.span>
                   )}
                 </AnimatePresence>

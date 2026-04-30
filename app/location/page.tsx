@@ -28,7 +28,7 @@ export default function LocationPage() {
               <ArrowLeft className="w-4 h-4" />
               На главную
             </Link>
-            <h1 className="title-section text-left md:text-center">Как нас найти</h1>
+            <h1 className="title-section text-left">Как нас найти</h1>
 
             <div className="mt-4 mb-8 md:mb-10">
               <p className="text-body text-left">

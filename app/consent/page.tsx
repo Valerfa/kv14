@@ -24,7 +24,7 @@ export default function ConsentPage() {
                 На главную
               </Link>
 
-              <h1 className="title-section text-left md:text-center mb-8">
+              <h1 className="title-section text-left mb-8">
                 Согласие на обработку персональных данных
               </h1>
 

@@ -16,6 +16,13 @@
   --muted-foreground: #6B7280;
   --border: #D4D4D1;
   --radius: 1rem;
+
+  --text-body: clamp(16px, 1.6vw, 40px);
+  --text-subtitle: clamp(12px, 1.6vw, 28px);
+  --text-title: clamp(24px, 2.4vw, 150px);
+
+  --lh-body: 1.5;
+  --lh-title: 1.1;
 }
 
 @theme inline {
@@ -82,87 +89,33 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, label, button {
 
 /* Заголовок секции */
 .title-section {
-  font-size: 28px;
+  font-size: var(--text-title);
+  line-height: var(--lh-title);
   font-family: var(--font-unbounded);
   text-transform: uppercase;
+  letter-spacing: -0.04em;
 }
 
 /* Маленький подзаголовок */
 .subtitle {
-  font-size: 14px;
-  opacity: 0.8;
+  font-size: var(--text-subtitle);
+  line-height: 1.3;
+  opacity: 0.6;
 }
 
 /* Основной текст */
 .text-body {
-  font-size: 16px;
+  font-size: var(--text-body);
+  line-height: 1.1;
   letter-spacing: normal;
   font-weight: 400;
 }
 
-@media (min-width: 768px) {
-  .text-body {
-    font-size: 17px;
-  }
+.text-footer {
+  font-size: clamp(14px, 0.9vw, 32px);
+  line-height: 1.1;
 }
 
-@media (min-width: 1024px) {
-  .text-body {
-    font-size: 18px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-  }
-
-  .title-section {
-    font-size: 40px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .text-body {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .text-body {
-    font-size: 22px;
-  }
-
-  .subtitle {
-    font-size: 18px;
-  }
-
-  .title-section {
-    font-size: 48px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .text-body {
-    font-size: 24px;
-  }
-
-  .subtitle {
-    font-size: 20px;
-  }
-
-  .title-section {
-    font-size: 56px;
-  }
-}
-
-@media (min-width: 2400px) {
-  .text-body {
-    font-size: 26px;
-  }
-
-  .title-section {
-    font-size: 64px;
-  }
-}
 
 /* Hide scrollbar for touch sliders */
 .hide-scrollbar {

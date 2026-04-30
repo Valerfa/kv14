@@ -9,7 +9,7 @@ export function Hero2() {
     <section className="relative min-h-screen w-full overflow-hidden bg-beige text-black">
       <div className="relative w-full h-screen overflow-hidden md:hidden">
         <Image
-          src="/images/image14.webp"
+          src="/images/image4.webp"
           alt="Фотостудия Квартира 14"
           fill
           className="w-full h-full object-cover"
@@ -32,7 +32,7 @@ export function Hero2() {
 
       <div className="relative hidden md:block h-screen w-full overflow-hidden">
         <Image
-          src="/images/image16.webp"
+          src="/images/image4.webp"
           alt="Фотостудия Квартира 14"
           fill
           priority
@@ -42,10 +42,10 @@ export function Hero2() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div>
-            <p className="text-2xl text-beige uppercase mb-3">
+            <p className="text-[clamp(24px,2vw,200px)] text-beige uppercase mb-3">
               Фотостудия в центре Владимира
             </p>
-            <h1 className="text-5xl md:text-5xl lg:text-6xl uppercase text-beige">
+            <h1 className="text-[clamp(24px,6vw,800px)] uppercase text-beige">
               КВАРТИРА 14
             </h1>
           </div>
@@ -61,7 +61,7 @@ export function Hero2() {
       >
         <Link
           href="/booking"
-          className="border border-beige flex items-center justify-center gap-2 bg-primary text-beige h-12 px-6 full font-medium hover:opacity-90 transition-opacity"
+          className="text-body border border-beige flex items-center justify-center gap-2 lg:gap-4 bg-primary text-beige h-12 md:h-14 lg:h-16 xl:h-18 2xl:h-20 3xl:h-22 px-6 full font-medium hover:opacity-90 transition-opacity"
         >
           <span>Забронировать</span>
           <svg
@@ -70,7 +70,7 @@ export function Hero2() {
             viewBox="0 0 12 12"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4"
+            className="w-[clamp(16px,2vw,32px)] h-[clamp(16px,2vw,32px)]"
             aria-hidden="true"
           >
             <path

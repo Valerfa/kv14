@@ -14,35 +14,35 @@ const rules = [
   {
     id: "prepayment",
     title: "Отмена бронирования",
-    content: "Возврат средств осуществляется при отмене бронирования за 72 часа . Перенос брони возможен так же, как и отмена — за 72 часа до начала съёмки В случае отмены за меньший срок, предоплата возврату не подлежит, а перенос невозможен, так как бронирование помещения, как услуга, считается полностью оказанной. Такие же правила действуют на брони, сделанные за 1-3 дня до съемки! Возврат средств НЕ осуществляется при отмене или переносе этих броней, так как до съемки осталось меньше 3-х дней.",
+    content: "Возврат средств осуществляется при отмене бронирования за 72 часа . Перенос брони возможен так же, как и отмена — за 72 часа до начала съёмки В случае отмены за меньший срок, предоплата возврату не подлежит, а перенос невозможен, так как бронирование помещения, как услуга, считается полностью оказанной. Такие же правила действуют на брони, сделанные за 1-3 дня до съемки! Возврат средств НЕ осуществляется при отмене или переносе этих броней, так как до съемки осталось меньше 3-х дней",
   },
   {
     id: "cancellation",
     title: "Время аренды",
-    content: "Минимальное время аренды 1 час. При этом 5 минут до окончания брони отводится на уборку помещения.",
+    content: "Минимальное время аренды 1 час. При этом 5 минут до окончания брони отводится на уборку помещения",
   },
   {
     id: "cleaning-time",
     title: "Время работы",
-    content: "Фотостудия работает ежедневно с 9:00 до 21:00. Аренда в ночное время обсуждается отдельно.",
+    content: "Фотостудия работает ежедневно с 9:00 до 21:00. Аренда в ночное время обсуждается отдельно",
   },
   {
     id: "late-policy",
     title: "Ограничения",
-    content: "Запрещается наклеивать на стены и пол клейкую ленту, а так же использовать хлопушки, блестки, конфетти и тд. В студии категорически запрещено курение, употребление спиртных напитков и наркотических веществ. За несоблюдение правил и порчу имущества взимается штраф в размере стоимости вещи/химчистки.",
+    content: "Запрещается наклеивать на стены и пол клейкую ленту, а так же использовать хлопушки, блестки, конфетти и тд. В студии категорически запрещено курение, употребление спиртных напитков и наркотических веществ. За несоблюдение правил и порчу имущества взимается штраф в размере стоимости вещи/химчистки",
   },
   {
-    id: "restrictions",
+    id: "equipment",
     title: "Оборудование",
-    content: "В студии доступно базовое оборудование и реквизит. Использование дополнительного оборудования оплачивается отдельно.",
+    content: "В нашем пространстве качественный постоянный студийный свет Aputure Amaran Halo 200x. А так же насадки к нему: рефлектор, сфера, софтбокс с сотами. Отпариватель доступен по запросу и входит в стоимость аренды",
   },
   {
-    id: "restrictions",
+    id: "people",
     title: "Количество человек",
     content: "В стоимость аренды включено не более 8 человек",
   },
   {
-    id: "restrictions",
+    id: "animals",
     title: "Съемка с животными",
     content: "Съемка с животными возможна по предварительному согласованию",
   },
@@ -60,31 +60,43 @@ export function Rules() {
   };
 
   return (
-    <section id="rules" className="py-16 lg:py-24 bg-beige">
-      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[1600px] 2xl:mx-auto">
+    <section
+      id="rules"
+      className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-24 my-10 sm:my-12 md:my-16 lg:my-24 xl:my-32 2xl:my-64 py-16 lg:py-24 bg-beige"
+    >
+      <div className="">
         <FadeIn>
-          <div className="max-w-3xl mx-auto">
+          <div>
             {/* Header */}
-            <div className="mb-12">
-              <span className="subtitle mb-2 block md:text-center">
-                / Правила студии
-              </span>
-              <h2 className="title-section mb-8 md:text-center">
-                ВАЖНО ПЕРЕД СЪЁМКОЙ
-              </h2>
+            <div className="mb-12 grid grid-cols-4 lg:grid-cols-12">
+              <div className="col-span-4 lg:col-span-6 lg:col-start-4 text-left lg:text-center">
+                <span className="subtitle mb-2 block">
+                  / Правила студии
+                </span>
+                <h2 className="title-section">
+                  ВАЖНО ПЕРЕД СЪЁМКОЙ
+                </h2>
+              </div>
             </div>
 
             {/* Accordion */}
             <div className="space-y-0">
               {rules.map((rule, index) => (
                 <FadeIn key={rule.id} delay={index * 0.03}>
-                  <div className="border-t border-b border-foreground/60 last:border-b-0">
+                  <div className="border-t border-b xl:border-b-2 xl:border-t-2 border-foreground/30 last:border-b-0">
                     <button
                       onClick={() => toggleRule(rule.id)}
-                      className="w-full flex items-center justify-between py-5 text-left hover:bg-foreground/5 transition-colors"
+                      className="w-full flex items-center justify-between py-6 2xl:py-12 text-left transition-colors"
                       aria-expanded={openId === rule.id}
                     >
-                      <span className="font-medium text-body md:text-lg pr-4 md:text-center">{rule.title}</span>
+                      <div className="w-full lg:w-1/2 flex items-start">
+                        <span className="mr-4 lg:mr-6 2xl:mr-12 subtitle">
+                          {String(index + 1).padStart(2, "/ ")}
+                        </span>
+                        <span className="text-[clamp(18px,2vw,44px)] tracking-tight uppercase pr-4 text-left">
+                          {rule.title}
+                        </span>
+                      </div>
                       <motion.div
                         animate={{ rotate: openId === rule.id ? 90 : 0 }}
                         transition={{ duration: 0.3 }}
@@ -96,7 +108,7 @@ export function Rules() {
                           viewBox="0 0 12 12"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                          className="text-foreground/60"
+                          className="text-foreground/60 w-[clamp(20px,2vw,42px)] h-[clamp(20px,2vw,42px)]"
                         >
                           <path
                             d="M6.63569 0.633545L6.07814 1.23333L9.85428 5.00947C10.1195 5.27436 10.4504 5.46388 10.8131 5.55857L10.9018 5.57969H0V6.42446H10.9018L10.8131 6.44558C10.4504 6.54028 10.1195 6.7298 9.85428 6.99469L6.07814 10.7708L6.63147 11.3664L12 6.00208L6.63569 0.633545Z"
@@ -113,8 +125,10 @@ export function Rules() {
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3, ease: "easeOut" }}
                         >
-                          <div className="px-4 md:px-6 pb-5 text-sm md:text-body text-foreground whitespace-pre-line md:text-center">
-                            {rule.content}
+                          <div className="pl-[clamp(26px,2vw,72px)] pb-5 text-body text-foreground text-left">
+                            <div className="w-full lg:w-1/2">
+                              {rule.content}
+                            </div>
                           </div>
                         </motion.div>
                       )}
@@ -126,7 +140,7 @@ export function Rules() {
 
             <div className="grid grid-cols-4">
             <div className="col-span-3 col-start-2">
-            <p className="text-body text-primary-light mt-4 md:text-center">
+            <p className="text-body text-primary-light mt-4 text-left">
               С полным сводом правил можно ознакомиться по{" "}
               <Link href="/rules" className="underline underline-offset-4 hover:opacity-80 transition-opacity">
                 ссылке

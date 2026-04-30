@@ -14,8 +14,8 @@ const photos = [
 
 export function Photos() {
   return (
-    <section id="photos" className="py-16 lg:py-24">
-      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[1600px] 2xl:mx-auto">
+    <section id="photos" className="">
+      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-24 my-10 sm:my-12 md:my-16 lg:my-24 xl:my-32 2xl:my-64 pt-16 lg:pt-24 ">
         <FadeIn>
           <div className="text-center mb-12 lg:mb-16">
             <span className="text-sm text-muted-foreground tracking-widest uppercase mb-4 block">

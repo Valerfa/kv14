@@ -26,37 +26,37 @@ export function About() {
   return (
     <section
       id="about"
-      className="py-16 lg:py-24 bg-primary text-beige"
+      className="py-10 sm:py-12 md:py-16 md:py-24 xl:py-32 2xl:py-64 px-4 sm:px-6 md:px-8 md:px-10 xl:px-12 2xl:px-24 bg-primary text-beige"
     >
-      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[1600px] 2xl:mx-auto">
+      <div className="">
         <FadeIn className="">
-          <div className="grid grid-cols-12 gap-4">
-            <div className="col-start-0 col-span-12 lg:col-start-4 lg:col-span-6">
-              <p className="subtitle mb-2 text-left lg:text-center">/ О нас</p>
-              <h2 className="title-section leading-[1.05] mb-6 text-left lg:text-center">
+          <div className="grid grid-cols-4 md:grid-cols-12">
+            <div className="col-span-4 md:col-span-6 md:col-start-4 text-left md:text-center mb-4 md:mb-6 lg:mb-8 xl:mb-12 2xl:mb-16">
+              <p className="subtitle">/ О нас</p>
+              <h2 className="title-section leading-[1.05]">
                 СТУДИЯ, ГДЕ ПРОСТРАНСТВО НЕ ОТВЛЕКАЕТ — А РАСКРЫВАЕТ
               </h2>
             </div>
 
-            <div className="col-start-4 col-span-9 lg:col-start-5 lg:col-span-4 mb-6">
+            <div className="col-span-3 col-start-2 md:col-span-4 md:col-start-5 3xl:col-span-2 3xl:col-start-6 my-2 md:my-6 xl:my-8 2xl:my-10">
               <Image
                 src="/images/image11.webp"
                 alt="Фотостудия Квартира 14"
                 width={300}
                 height={300}
-                className="w-full h-[400px] lg:h-[600px] object-cover"
+                className="w-1/2 md:w-full h-[200px] md:h-[300px] lg:h-[400px] xl:h-[600px] 2xl:h-[1000px] 3xl:h-[1200px] object-cover"
                 priority={false}
               />
             </div>
 
-            <div className="col-start-4 col-span-9 lg:col-start-4 lg:col-span-6 text-body text-left lg:text-center">
+            <div className="col-start-2 col-span-3 text-body text-left md:col-start-5 md:col-span-4 md:text-center">
               <p className="">
                 Здесь свет живёт в течение дня, медленно проходя через комнаты, ложится на стены, паркет, линии дверных проёмов.
               </p>
-              <p className="mt-4 hidden">
+              <p className="hidden">
                 Высокие потолки, распашные двери, глубина перспективы и воздух между пространствами — всё остаётся свободным, чтобы вы могли двигаться, чувствовать, быть.
               </p>
-              <p className="mt-6 subtitle">//</p>
+              <p className="text-body mt-2 md:mt-6 xl:mt-8 2xl:mt-10">//</p>
             </div>
           </div>
         </FadeIn>

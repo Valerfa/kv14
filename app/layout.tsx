@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import Script from "next/script";
 import { Header } from "@/components/shared/Header";
 import { IntroOverlay } from "@/components/shared/IntroOverlay";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -27,6 +28,12 @@ export default function RootLayout({
       lang="ru"
       className={`${montserrat.variable} h-full antialiased`}
     >
+      <head>
+        <Script
+          src="https://booking.booknow.ru/widget.js"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body
         className="min-h-full flex flex-col font-sans"
         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
@@ -34,7 +41,7 @@ export default function RootLayout({
         <TooltipProvider delayDuration={200}>
           <IntroOverlay />
           <Header />
-          <div className="flex min-h-0 flex-1 flex-col pt-20">{children}</div>
+          <div className="flex min-h-0 flex-1 flex-col">{children}</div>
         </TooltipProvider>
       </body>
     </html>

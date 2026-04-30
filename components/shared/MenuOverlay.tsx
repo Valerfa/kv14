@@ -30,13 +30,13 @@ export function MenuOverlay({ isOpen, onClose, links }: MenuOverlayProps) {
         >
           <div className="flex min-h-screen flex-col px-8 pb-10 pt-28">
             <div className="flex flex-1 flex-col items-center justify-center">
-              <nav className="flex min-h-[60vh] flex-col items-center justify-center gap-6 text-center">
+              <nav className="flex min-h-[60vh] flex-col items-center justify-center gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 text-center">
                 {links.map(({ label, href }) => (
                   <Link
                     key={href + label}
                     href={href}
                     onClick={onClose}
-                    className="uppercase text-3xl font-medium text-beige transition-opacity hover:opacity-75"
+                    className="uppercase text-[clamp(28px,3vw,600px)] font-medium text-beige transition-opacity hover:opacity-75"
                   >
                     {label}
                   </Link>

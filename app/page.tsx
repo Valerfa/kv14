@@ -15,9 +15,9 @@ export default function Home() {
         <About />
         <Rent />
         <FavArea />
-        <ShotInStudio />
         <Events />
         <Rules />
+        <ShotInStudio />
       </main>
       <Footer />
     </>

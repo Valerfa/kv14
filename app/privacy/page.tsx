@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import { Footer } from "@/components/sections/Footer";
 import { FadeIn } from "@/components/shared/FadeIn";
 
@@ -13,21 +12,21 @@ export default function PrivacyPage() {
   return (
     <>
       <main className="flex-1">
-        <article className="py-12 md:py-20">
-          <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[800px] 2xl:mx-auto">
+        <section className="py-12 md:py-20 px-4 md:px-0">
+          <div className="max-w-[1200px] mx-auto w-full">
             <FadeIn>
+              <div className="pt-20">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 text-sm text-primary-light hover:text-primary transition-colors mb-6"
+                className="inline-block mb-6 text-body cursor-pointer hover:opacity-70 transition-opacity"
               >
-                <ArrowLeft className="w-4 h-4" />
-                На главную
+                ← На главную
               </Link>
-              <h1 className="title-section text-left md:text-center mb-8">
+              <h1 className="title-section mb-8 text-left md:text-center">
                 Политика обработки персональных данных
               </h1>
 
-              <div className="max-w-none text-left">
+              <div className="text-body space-y-4 text-left">
                 <h2 className="font-[var(--font-unbounded)] text-xl font-medium mt-10 mb-4">
                   1. Общие положения
                 </h2>
@@ -167,9 +166,10 @@ export default function PrivacyPage() {
                   11.2. Актуальная версия Политики размещается на сайте.
                 </p>
               </div>
+              </div>
             </FadeIn>
           </div>
-        </article>
+        </section>
       </main>
       <Footer />
     </>
