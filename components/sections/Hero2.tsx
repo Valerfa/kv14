@@ -61,7 +61,7 @@ export function Hero2() {
       >
         <Link
           href="/booking"
-          className="text-body border border-beige flex items-center justify-center gap-2 lg:gap-4 bg-primary text-beige h-12 md:h-14 lg:h-16 xl:h-18 2xl:h-20 3xl:h-22 px-6 full font-medium hover:opacity-90 transition-opacity"
+          className="text-body border border-beige flex items-center justify-center gap-2 lg:gap-4 bg-primary text-beige h-8 md:h-10 lg:h-12 xl:h-14 2xl:h-16 3xl:h-18 px-6 font-medium hover:opacity-90 transition-opacity"
         >
           <span>Забронировать</span>
           <svg

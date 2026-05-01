@@ -48,8 +48,8 @@ export function Footer() {
             </div>
 
             {/* 2. Контакты */}
-            <div className="flex flex-col gap-8">
-              <div className="text-footer uppercase mb-3 text-beige">Контакты</div>
+            <div className="flex flex-col gap-2">
+              <div className="text-footer uppercase mb-2 text-beige">Контакты</div>
               <div>
                 <p className="text-footer uppercase tracking-widest mb-1 text-beige/60">Телефон</p>
                 <p className="text-footer">+7 (904) 251-66-91</p>
@@ -57,12 +57,12 @@ export function Footer() {
               <div>
                 <p className="text-footer uppercase tracking-widest mb-1 text-beige/60">VK</p>
                 <a
-                  href="https://vk.com/kvartira.014"
+                  href="https://vk.com/kv014"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-footer hover:text-beige/80 transition-colors"
                 >
-                  https://vk.com/kvartira.014
+                  https://vk.com/kv014
                 </a>
               </div>
               <div>
@@ -83,13 +83,13 @@ export function Footer() {
 
             {/* 3. Адрес */}
             <div>
-              <div className="text-footer uppercase mb-8 text-beige">Адрес</div>
+              <div className="text-footer uppercase mb-4 text-beige">Адрес</div>
               <p className="text-footer">г. Владимир, ул. Ильича, д. 4</p>
               <p className="text-footer text-beige/60">(за Торговыми рядами)</p>
             
 
-
-            <div className="text-footer uppercase mb-8 mt-8 text-beige">Юридическая информация</div>
+<div className="bg-beige/5 p-2 md:p-4 mt-8 rounded-lg">
+            <div className="text-footer uppercase mb-4 text-beige">Юридическая информация</div>
               <div className="flex flex-col items-start gap-3">
                 {footerLinks.map((link) => (
                   <Link
@@ -101,10 +101,12 @@ export function Footer() {
                   </Link>
                 ))}
               </div>
-              <div className="text-footer text-beige/60 mt-4 space-y-1">
-                <p>Индивидуальный исполнитель: Лютикова Анна Николаевна</p>
+              <div className="text-footer text-beige/80 mt-4 space-y-2">
+                <p>Индивидуальный исполнитель: </p>
+                <p>Лютикова Анна Николаевна</p>
                 <p>Самозанятая (НПД)</p>
                 <p>ИНН: 332712457398</p>
+              </div>
               </div>
               </div>
           </div>
@@ -149,12 +151,12 @@ export function Footer() {
               <div>
                 <p className="text-footer uppercase mb-1 text-beige/60">VK</p>
                 <a
-                  href="https://t.me/studio"
+                  href="https://vk.com/kv014"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-footer hover:text-beige/80 transition-colors"
                 >
-                  @studio
+                  https://vk.com/kv014
                 </a>
               </div>
               <div>
@@ -173,7 +175,7 @@ export function Footer() {
             <p className="text-[clamp(9px,0.9vw,24px)] text-beige/60 leading-relaxed w-1/2">
               *Социальная сеть Instagram принадлежит Meta Platforms Inc., деятельность которой признана экстремистской и запрещена на территории РФ.
             </p>
-            <div className="flex flex-col items-start gap-4 text-left md:items-start">
+            <div className="bg-beige/5 p-4 mt-4 rounded-lg flex flex-col items-start gap-4 text-left md:items-start">
               <div className="text-footer uppercase text-beige">
                 Юридическая информация
               </div>
@@ -186,8 +188,9 @@ export function Footer() {
                   {link.label}
                 </Link>
               ))}
-              <div className="text-footer text-beige/60 mt-4 space-y-1">
-                <p>Индивидуальный исполнитель: <br/> Лютикова Анна Николаевна</p>
+              <div className="text-footer text-beige/80 mt-4 space-y-2">
+                <p>Индивидуальный исполнитель:</p>
+                <p>Лютикова Анна Николаевна</p>
                 <p>Самозанятая (НПД)</p>
                 <p>ИНН: 332712457398</p>
               </div>

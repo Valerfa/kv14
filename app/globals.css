@@ -17,8 +17,8 @@
   --border: #D4D4D1;
   --radius: 1rem;
 
-  --text-body: clamp(16px, 1.6vw, 40px);
-  --text-subtitle: clamp(12px, 1.6vw, 28px);
+  --text-body: clamp(16px, 1.4vw, 40px);
+  --text-subtitle: clamp(12px, 1.2vw, 28px);
   --text-title: clamp(24px, 2.4vw, 150px);
 
   --lh-body: 1.5;

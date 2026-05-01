@@ -5,7 +5,7 @@ import { FadeIn } from "@/components/shared/FadeIn";
 
 export function FavArea() {
   return (
-    <section className="mx-4 sm:mx-6 md:mx-8 md:mx-10 xl:mx-12 2xl:mx-24 mb-10 sm:mb-12 md:mb-16 md:mb-24 xl:mb-32 2xl:mb-64 bg-beige text-black mt-4 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-16">
+    <section className="mx-4 sm:mx-6 md:mx-8 md:mx-10 xl:mx-12 2xl:mx-24 pb-10 md:pb-16 md:pb-20 xl:pb-28 2xl:pb-32 bg-beige text-black mt-4 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-16">
       <div className="">
         <FadeIn>
           <div className="grid grid-cols-4 md:grid-cols-12">
@@ -25,7 +25,7 @@ export function FavArea() {
                 alt="Пространство с проёмами в студии"
                 width={1200}
                 height={900}
-                className="w-1/2 md:w-full h-[200px] md:h-[400px] lg:h-[500px] xl:h-[800px] 2xl:h-[1000px] object-cover"
+                className="w-1/2 md:w-full h-[200px] md:h-[400px] lg:h-[500px] xl:h-[600px] object-cover"
               />
             </div>
 

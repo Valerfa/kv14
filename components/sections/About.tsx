@@ -26,13 +26,13 @@ export function About() {
   return (
     <section
       id="about"
-      className="py-10 sm:py-12 md:py-16 md:py-24 xl:py-32 2xl:py-64 px-4 sm:px-6 md:px-8 md:px-10 xl:px-12 2xl:px-24 bg-primary text-beige"
+      className="py-10 md:py-16 md:py-20 xl:py-28 2xl:py-32 px-4 sm:px-6 md:px-8 md:px-10 xl:px-12 2xl:px-24 bg-primary text-beige"
     >
       <div className="">
         <FadeIn className="">
           <div className="grid grid-cols-4 md:grid-cols-12">
             <div className="col-span-4 md:col-span-6 md:col-start-4 text-left md:text-center mb-4 md:mb-6 lg:mb-8 xl:mb-12 2xl:mb-16">
-              <p className="subtitle">/ О нас</p>
+              <p className="subtitle mb-2">/ О нас</p>
               <h2 className="title-section leading-[1.05]">
                 СТУДИЯ, ГДЕ ПРОСТРАНСТВО НЕ ОТВЛЕКАЕТ — А РАСКРЫВАЕТ
               </h2>
@@ -44,7 +44,7 @@ export function About() {
                 alt="Фотостудия Квартира 14"
                 width={300}
                 height={300}
-                className="w-1/2 md:w-full h-[200px] md:h-[300px] lg:h-[400px] xl:h-[600px] 2xl:h-[1000px] 3xl:h-[1200px] object-cover"
+                className="w-1/2 md:w-full h-[200px] h-[200px] md:h-[400px] lg:h-[500px] xl:h-[600px] object-cover"
                 priority={false}
               />
             </div>

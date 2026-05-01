@@ -10,7 +10,7 @@ import { Footer } from "@/components/sections/Footer";
 export default function Home() {
   return (
     <>
-      <main className="-mt-20 flex-1">
+      <main className=" flex-1">
         <Hero2 />
         <About />
         <Rent />

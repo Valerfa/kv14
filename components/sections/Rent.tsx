@@ -7,9 +7,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FadeIn } from "@/components/shared/FadeIn";
 
 const rentSlides = [
-  "/images/image1.jpg",
-  "/images/image2.jpg",
-  "/images/image3.jpg",
+  "/images/image1.webp",
+  "/images/image2.webp",
+  "/images/image4.webp",
+  "/images/image5.webp",
+  "/images/image6.webp",
+  "/images/image7.webp",
+  "/images/image8.webp",
+  "/images/image9.webp",
+  "/images/image10.webp",
+  "/images/image11.webp",
+  "/images/image12.webp",
+  "/images/image13.webp",
+  "/images/image14.webp",
+  "/images/image15.webp",
+  "/images/image16.webp",
+
 ];
 
 export function Rent() {
@@ -30,7 +43,7 @@ export function Rent() {
   return (
     <section
       id="rent"
-      className="mx-4 sm:mx-6 md:mx-8 md:mx-10 xl:mx-12 2xl:mx-24 mt-10 sm:mt-12 md:mt-16 md:mt-24 xl:mt-32 2xl:mt-64 pt-16 md:pt-24 pb-4 bg-beige text-black"
+      className="mx-4 sm:mx-6 md:mx-8 md:mx-10 xl:mx-12 2xl:mx-24 pt-10 md:pt-16 md:pt-20 xl:pt-28 2xl:pt-32 pb-4 bg-beige text-black"
     >
       <div className="">
         <FadeIn>
@@ -43,13 +56,11 @@ export function Rent() {
             </div>
           </div>
 
-          <div className="mb-6 grid grid-cols-4 md:flex md:items-start md:justify-between">
-            <div className="col-start-2 col-span-2 md:col-span-4 md:flex-1 space-y-4">
-            <div className="flex flex-col gap-4 md:justify-between">
-            <div>
+          <div className="mb-6 grid grid-cols-4 md:grid-cols-12">
+            <div className="col-start-2 col-span-3 md:col-start-1">
               <div>
                 <p className="text-body text-primary mb-2">1800 / час</p>
-                <div className="flex flex-col gap-1 text-body opacity-80">
+                <div className="flex flex-col gap-1 text-body opacity-60 mb-4 ">
                   <p>44 м² пространства</p>
                   <p>Потолки 3,5 м</p>
                 </div>
@@ -57,13 +68,13 @@ export function Rent() {
 
               <Link
                 href="/booking"
-                className="mt-4 inline-flex items-center justify-center full border xl:border-2 border-black px-8 py-3 text-body hover:opacity-90 transition-opacity"
+                className="mt-4 inline-flex items-center justify-center full border xl:border-2 border-black/60 px-8 py-3 text-body hover:opacity-90 transition-opacity"
               >
                 Забронировать
               </Link>
               </div>
 
-              <div className="flex items-center gap-4 md:ml-auto">
+              <div className="col-start-2 col-span-3 md:col-start-11 md:col-span-3 flex items-center gap-6 md:ml-auto md:mt-auto mt-6">
                 <button
                   type="button"
                   onClick={goPrev}
@@ -75,7 +86,7 @@ export function Rent() {
                     alt=""
                     width={16}
                     height={16}
-                    className="w-[clamp(20px,2vw,42px)] h-[clamp(20px,2vw,42px)] rotate-180"
+                    className="w-[clamp(20px,2vw,36px)] h-[clamp(20px,2vw,36px)] rotate-180"
                     aria-hidden="true"
                   />
                 </button>
@@ -95,12 +106,10 @@ export function Rent() {
                   />
                 </button>
               </div>
-              </div>
-            </div>
           </div>
 
           <div className="flex flex-col md:flex-row gap-4">
-          <div className="w-1/2 h-[clamp(200px,70vh,1500px)] overflow-hidden hidden md:block">
+          <div className="w-1/2 h-[200px] md:h-[400px] lg:h-[500px] xl:h-[600px] overflow-hidden hidden md:block">
               <Image
                 src="/images/image3.webp"
                 alt="Фотостудия Квартира 14"
@@ -109,7 +118,7 @@ export function Rent() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="w-full md:w-1/2 h-[clamp(300px,70vh,1000px)]">
+            <div className="w-full md:w-1/2 h-[350px] md:h-[550px] lg:h-[600px] xl:h-[800px]">
               <div className="overflow-hidden w-full h-full">
                 <AnimatePresence mode="wait">
                   <motion.div

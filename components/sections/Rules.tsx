@@ -62,7 +62,7 @@ export function Rules() {
   return (
     <section
       id="rules"
-      className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-24 my-10 sm:my-12 md:my-16 lg:my-24 xl:my-32 2xl:my-64 py-16 lg:py-24 bg-beige"
+      className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-24 py-10 md:py-16 md:py-20 xl:py-28 2xl:py-32 bg-beige"
     >
       <div className="">
         <FadeIn>
@@ -83,17 +83,17 @@ export function Rules() {
             <div className="space-y-0">
               {rules.map((rule, index) => (
                 <FadeIn key={rule.id} delay={index * 0.03}>
-                  <div className="border-t border-b xl:border-b-2 xl:border-t-2 border-foreground/30 last:border-b-0">
+                  <div className="border-t border-b border-foreground/60 last:border-b-0">
                     <button
                       onClick={() => toggleRule(rule.id)}
-                      className="w-full flex items-center justify-between py-6 2xl:py-12 text-left transition-colors"
+                      className="w-full flex items-center justify-between py-4 md:py-6 lg:py-8 xl:py-10 text-left transition-colors"
                       aria-expanded={openId === rule.id}
                     >
                       <div className="w-full lg:w-1/2 flex items-start">
                         <span className="mr-4 lg:mr-6 2xl:mr-12 subtitle">
                           {String(index + 1).padStart(2, "/ ")}
                         </span>
-                        <span className="text-[clamp(18px,2vw,44px)] tracking-tight uppercase pr-4 text-left">
+                        <span className="text-[clamp(18px,1.6vw,44px)] tracking-tight uppercase pr-4 text-left">
                           {rule.title}
                         </span>
                       </div>
@@ -108,7 +108,7 @@ export function Rules() {
                           viewBox="0 0 12 12"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                          className="text-foreground/60 w-[clamp(20px,2vw,42px)] h-[clamp(20px,2vw,42px)]"
+                          className="text-foreground/80 w-[clamp(20px,2vw,42px)] h-[clamp(20px,2vw,42px)]"
                         >
                           <path
                             d="M6.63569 0.633545L6.07814 1.23333L9.85428 5.00947C10.1195 5.27436 10.4504 5.46388 10.8131 5.55857L10.9018 5.57969H0V6.42446H10.9018L10.8131 6.44558C10.4504 6.54028 10.1195 6.7298 9.85428 6.99469L6.07814 10.7708L6.63147 11.3664L12 6.00208L6.63569 0.633545Z"
@@ -125,7 +125,7 @@ export function Rules() {
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3, ease: "easeOut" }}
                         >
-                          <div className="pl-[clamp(26px,2vw,72px)] pb-5 text-body text-foreground text-left">
+                          <div className="pl-7 md:pl-10 lg:pl-12 xl:pl-14 2xl:pl-16 pb-5 text-body text-foreground text-left">
                             <div className="w-full lg:w-1/2">
                               {rule.content}
                             </div>

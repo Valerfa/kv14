@@ -17,7 +17,7 @@ const photos = [
 
 export function ShotInStudio() {
   return (
-    <section className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-24 my-10 sm:my-12 md:my-16 lg:my-24 xl:my-32 2xl:my-64 py-16 md:py-24">
+    <section className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-24 py-10 md:py-16 md:py-20 xl:py-28 2xl:py-32">
       <div className="">
         <FadeIn>
           <div className="grid grid-cols-4 lg:grid-cols-12">
@@ -29,11 +29,11 @@ export function ShotInStudio() {
             </div>
           </div>
 
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4">
             {photos.map((src, index) => (
               <div
                 key={index}
-                className={`${index % 3 === 0 ? "aspect-square" : "aspect-[3/4]"} md:aspect-auto ${index % 3 === 1 ? "md:col-span-2" : "md:col-span-1"}`}
+                className={`${index % 3 === 0 ? "aspect-square" : "aspect-[3/4]"} md:aspect-auto lg:aspect-[3/4] md:col-span-1`}
               >
                 <img
                   src={src}
