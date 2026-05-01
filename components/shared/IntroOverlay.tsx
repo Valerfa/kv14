@@ -31,7 +31,7 @@ export function IntroOverlay() {
       }`}
       aria-hidden
     >
-      <span className="uppercase text-primary font-medium tracking-tight text-[clamp(24px,6vw,800px)]">
+      <span className="text-primary font-medium tracking-tight text-[clamp(24px,6vw,800px)] uppercase">
         Квартира 14
       </span>
     </div>

@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, label, button {
 }
 
 .text-footer {
-  font-size: clamp(14px, 0.9vw, 32px);
+  font-size: clamp(16px, 0.9vw, 32px);
   line-height: 1.1;
 }
 
