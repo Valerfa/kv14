@@ -89,7 +89,7 @@ export function Footer() {
             
 
 
-            <div className="text-footer uppercase mb-8 mt-8 text-beige">Документы</div>
+            <div className="text-footer uppercase mb-8 mt-8 text-beige">Юридическая информация</div>
               <div className="flex flex-col items-start gap-3">
                 {footerLinks.map((link) => (
                   <Link
@@ -100,6 +100,11 @@ export function Footer() {
                     {link.label}
                   </Link>
                 ))}
+              </div>
+              <div className="text-footer text-beige/60 mt-4 space-y-1">
+                <p>Индивидуальный исполнитель: Лютикова Анна Николаевна</p>
+                <p>Самозанятая (НПД)</p>
+                <p>ИНН: 332712457398</p>
               </div>
               </div>
           </div>
@@ -169,6 +174,9 @@ export function Footer() {
               *Социальная сеть Instagram принадлежит Meta Platforms Inc., деятельность которой признана экстремистской и запрещена на территории РФ.
             </p>
             <div className="flex flex-col items-start gap-4 text-left md:items-start">
+              <div className="text-footer uppercase text-beige">
+                Юридическая информация
+              </div>
               {footerLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -178,6 +186,11 @@ export function Footer() {
                   {link.label}
                 </Link>
               ))}
+              <div className="text-footer text-beige/60 mt-4 space-y-1">
+                <p>Индивидуальный исполнитель: <br/> Лютикова Анна Николаевна</p>
+                <p>Самозанятая (НПД)</p>
+                <p>ИНН: 332712457398</p>
+              </div>
             </div>
           </div>
 
