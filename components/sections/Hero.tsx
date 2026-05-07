@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 export function Hero() {
@@ -44,20 +43,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Floating button - fixed bottom right */}
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className="fixed bottom-6 right-6 z-50"
-      >
-        <Link
-          href="/booking"
-          className="block bg-primary text-beige px-6 py-3 xl text-sm font-medium hover:bg-primary/85 transition-colors shadow-lg"
-        >
-          Забронировать
-        </Link>
-      </motion.div>
     </section>
   );
 }

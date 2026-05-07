@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { CueOpenButton } from "@/components/shared/CueOpenButton";
 import { MenuOverlay } from "@/components/shared/MenuOverlay";
 
 const navLinks = [
@@ -93,13 +94,12 @@ export function Header() {
             </Link>
 
             <div className="ml-auto flex items-center gap-4 2xl:gap-8">
-              <Link
-                href="/booking"
+              <CueOpenButton
                 onClick={close}
                 className={`text-[clamp(14px,1.2vw,32px)]  font-medium underline underline-offset-4 hover:opacity-75 uppercase transition-colors duration-300 ${headerTextClass}`}
               >
                 Забронировать
-              </Link>
+              </CueOpenButton>
               <button
                 type="button"
                 onClick={() =>

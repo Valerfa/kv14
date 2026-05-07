@@ -1,34 +1,34 @@
 import Link from "next/link";
-import { Footer } from "@/components/sections/Footer";
-import { FadeIn } from "@/components/shared/FadeIn";
 
 export default function NotFound() {
   return (
-    <>
-      <main className="flex-1">
-        <section className="min-h-[60vh] flex items-center justify-center py-20">
-          <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[1600px] 2xl:mx-auto text-center">
-            <FadeIn>
-              <span className="font-[var(--font-unbounded)] text-8xl md:text-9xl font-medium text-muted block mb-6">
-                404
-              </span>
-              <h1 className="font-[var(--font-unbounded)] text-2xl md:text-3xl font-medium tracking-tight mb-4">
-                Страница не найдена
-              </h1>
-              <p className="text-muted-foreground max-w-md mx-auto mb-8">
-                Кажется, страница, которую вы ищете, не существует или была перемещена.
-              </p>
-              <Link
-                href="/"
-                className="inline-flex items-center justify-center px-8 py-4 text-body font-medium bg-primary text-primary-foreground full hover:bg-primary/90 transition-colors"
-              >
-                Вернуться на главную
-              </Link>
-            </FadeIn>
+    <main className="relative flex-1 overflow-hidden min-h-screen">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/images/image14.webp')",
+          filter: "grayscale(100%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-black/40" />
+
+      <section className="relative z-10 min-h-screen flex items-center justify-center py-8 md:py-12">
+        <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[1600px] 2xl:mx-auto w-full">
+          <div className="flex flex-col items-center justify-center text-center gap-4">
+            <h1 className="title-section text-beige">404</h1>
+            <p className="text-body text-beige/90">Страница не найдена</p>
+            <p className="text-subtitle text-beige/80">
+              Возможно, ссылка устарела или была введена неверно
+            </p>
+            <Link
+              href="/"
+              className="mt-4 inline-flex items-center justify-center border border-beige px-8 py-3 text-subtitle text-beige transition-colors hover:bg-beige hover:text-black"
+            >
+              Вернуться на главную
+            </Link>
           </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+        </div>
+      </section>
+    </main>
   );
 }

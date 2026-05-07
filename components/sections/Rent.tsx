@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { CueOpenButton } from "@/components/shared/CueOpenButton";
 import { FadeIn } from "@/components/shared/FadeIn";
 
 const rentSlides = [
@@ -66,12 +66,9 @@ export function Rent() {
                 </div>
               </div>
 
-              <Link
-                href="/booking"
-                className="mt-4 inline-flex items-center justify-center full border xl:border-2 border-black/60 px-8 py-3 text-body hover:opacity-90 transition-opacity"
-              >
+              <CueOpenButton className="mt-4 inline-flex items-center justify-center full border xl:border-2 border-black/60 px-8 py-3 text-body hover:opacity-90 transition-opacity">
                 Забронировать
-              </Link>
+              </CueOpenButton>
               </div>
 
               <div className="col-start-2 col-span-3 md:col-start-11 md:col-span-3 flex items-center gap-6 md:ml-auto md:mt-auto mt-6">

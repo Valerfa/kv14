@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
 
 export function Hero2() {
   return (
@@ -52,34 +50,6 @@ export function Hero2() {
         </div>
       </div>
 
-      {/* Floating button - fixed bottom right */}
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.8 }}
-        className="fixed bottom-6 right-6 z-30"
-      >
-        <Link
-          href="/booking"
-          className="text-body border border-beige flex items-center justify-center gap-2 lg:gap-4 bg-primary text-beige h-8 md:h-10 lg:h-12 xl:h-14 2xl:h-16 3xl:h-18 px-6 font-medium hover:opacity-90 transition-opacity"
-        >
-          <span>Забронировать</span>
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-[clamp(16px,2vw,32px)] h-[clamp(16px,2vw,32px)]"
-            aria-hidden="true"
-          >
-            <path
-              d="M6.63569 0.633545L6.07814 1.23333L9.85428 5.00947C10.1195 5.27436 10.4504 5.46388 10.8131 5.55857L10.9018 5.57969H0V6.42446H10.9018L10.8131 6.44558C10.4504 6.54028 10.1195 6.7298 9.85428 6.99469L6.07814 10.7708L6.63147 11.3664L12 6.00208L6.63569 0.633545Z"
-              fill="currentColor"
-            />
-          </svg>
-        </Link>
-      </motion.div>
     </section>
   );
 }
