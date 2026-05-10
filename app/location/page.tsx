@@ -19,11 +19,12 @@ export default function LocationPage() {
   return (
     <>
       <main className="flex-1">
-        <section className="py-8 md:py-12">
-          <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[1600px] 2xl:mx-auto">
+        <section className="py-12 md:py-20 px-4 md:px-0">
+          <div className="mx-auto w-full max-w-[1600px]">
+            <div className="pt-20">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-sm text-primary-light hover:text-primary transition-colors mb-8"
+              className="inline-flex cursor-pointer items-center gap-2 text-sm text-primary-light hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
               На главную
@@ -67,6 +68,7 @@ export default function LocationPage() {
                   Построить маршрут
                 </a>
               </div>
+            </div>
             </div>
           </div>
         </section>

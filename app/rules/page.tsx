@@ -11,12 +11,12 @@ export default function RulesPage() {
   return (
     <>
       <main className="flex-1">
-        <section className="py-8 md:py-12 px-4 md:px-0">
+        <section className="py-12 md:py-20 px-4 md:px-0">
           <div className="max-w-[1200px] mx-auto w-full">
             <div className="pt-20">
             <Link
               href="/"
-              className="inline-block mb-6 text-body cursor-pointer hover:opacity-70 transition-opacity"
+              className="inline-block mb-6 text-sm cursor-pointer hover:opacity-70 transition-opacity"
             >
               ← На главную
             </Link>

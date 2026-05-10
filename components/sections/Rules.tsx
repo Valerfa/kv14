@@ -86,7 +86,7 @@ export function Rules() {
                   <div className="border-t border-b border-foreground/60 last:border-b-0">
                     <button
                       onClick={() => toggleRule(rule.id)}
-                      className="w-full flex items-center justify-between py-4 md:py-6 lg:py-8 xl:py-10 text-left transition-colors"
+                      className="cursor-pointer w-full flex items-center justify-between py-4 md:py-6 lg:py-8 xl:py-10 text-left transition-colors"
                       aria-expanded={openId === rule.id}
                     >
                       <div className="w-full lg:w-1/2 flex items-start">

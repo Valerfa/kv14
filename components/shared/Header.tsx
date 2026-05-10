@@ -19,10 +19,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const isOverlayOpen = activeOverlay !== null;
-  const isDocsPage =
-    pathname === "/rules" ||
-    pathname === "/privacy" ||
-    pathname === "/offer";
+  const isInnerPage = pathname !== "/";
 
   useEffect(() => {
     document.body.style.overflow = isOverlayOpen ? "hidden" : "";
@@ -42,13 +39,11 @@ export function Header() {
   }, []);
 
   const close = () => setActiveOverlay(null);
-  const headerTextClass = isDocsPage
-    ? "text-primary"
-    : isOverlayOpen
-      ? "text-beige"
-      : isScrolled
-        ? "text-primary"
-        : "text-beige";
+  const headerTextClass = isOverlayOpen
+    ? "text-beige"
+    : isInnerPage || isScrolled
+      ? "text-primary"
+      : "text-beige";
 
   return (
     <>
@@ -105,7 +100,7 @@ export function Header() {
                 onClick={() =>
                   setActiveOverlay(activeOverlay === "menu" ? null : "menu")
                 }
-                className={`flex items-center justify-center full p-2 transition-colors duration-300 hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${headerTextClass}`}
+                className={`cursor-pointer flex items-center justify-center full p-2 transition-colors duration-300 hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${headerTextClass}`}
                 aria-expanded={isOverlayOpen}
                 aria-controls="mobile-nav-sheet"
                 aria-label={isOverlayOpen ? "Закрыть меню" : "Открыть меню"}

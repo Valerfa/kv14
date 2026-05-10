@@ -13,12 +13,13 @@ export default function ConsentPage() {
   return (
     <>
       <main className="flex-1">
-        <article className="py-12 md:py-20">
-          <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[800px] 2xl:mx-auto">
+        <article className="py-12 md:py-20 px-4 md:px-0">
+          <div className="mx-auto w-full max-w-[800px]">
             <FadeIn>
+              <div className="pt-20">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 text-sm text-primary-light hover:text-primary transition-colors mb-6"
+                className="inline-flex cursor-pointer items-center gap-2 text-sm text-primary-light hover:text-primary transition-colors mb-6"
               >
                 <ArrowLeft className="w-4 h-4" />
                 На главную
@@ -41,7 +42,7 @@ export default function ConsentPage() {
                   <br />— фамилия, имя, отчество
                   <br />— номер телефона
                   <br />— дата и время бронирования
-                  <br />— иные данные, предоставленные мной
+                  <br />— иные данные, предоставленные мной при заполнении форм или бронировании
                 </p>
 
                 <h2 className="font-[var(--font-unbounded)] text-xl font-medium mt-10 mb-4">
@@ -60,49 +61,52 @@ export default function ConsentPage() {
                   3. Действия с персональными данными
                 </h2>
                 <p className="text-body mb-6">
-                  Я даю согласие на:
+                  Я даю согласие на совершение следующих действий с моими персональными данными:
                   <br />— сбор
                   <br />— запись
-                  <br />— систематизацию
+                  <br />— систематизация
                   <br />— хранение
-                  <br />— уточнение
+                  <br />— уточнение (обновление, изменение)
                   <br />— использование
-                  <br />— передачу
+                  <br />— передача
                   <br />— удаление
                 </p>
 
                 <h2 className="font-[var(--font-unbounded)] text-xl font-medium mt-10 mb-4">
-                  4. Передача третьим лицам
+                  4. Передача персональных данных третьим лицам
                 </h2>
                 <p className="text-body mb-6">
-                  Данные могут передаваться:
-                  <br />— сервису EasyWeek
-                  <br />— платежным системам
+                  Я даю согласие на передачу моих персональных данных третьим лицам в целях оказания услуг, включая:
+                  <br />— сервис онлайн-бронирования, предоставляемый ООО «Квик Букинг Платформ»
+                  <br />— платежные сервисы, включая ООО НКО «ЮМани»
+                  <br />
+                  <br />
+                  Передача осуществляется в объеме, необходимом для выполнения указанных целей.
                 </p>
 
                 <h2 className="font-[var(--font-unbounded)] text-xl font-medium mt-10 mb-4">
-                  5. Трансграничная передача
+                  5. Обработка с использованием интернет-сервисов
                 </h2>
                 <p className="text-body mb-6">
-                  Возможна при использовании сторонних сервисов
+                  Я уведомлен(а), что при использовании сторонних сервисов обработка персональных данных может осуществляться с использованием серверов, расположенных за пределами Российской Федерации.
                 </p>
 
                 <h2 className="font-[var(--font-unbounded)] text-xl font-medium mt-10 mb-4">
-                  6. Срок действия
+                  6. Срок действия согласия
                 </h2>
                 <p className="text-body mb-6">
-                  Согласие действует до достижения целей или отзыва
+                  Согласие действует с момента его предоставления и до достижения целей обработки либо до его отзыва.
                 </p>
 
                 <h2 className="font-[var(--font-unbounded)] text-xl font-medium mt-10 mb-4">
                   7. Отзыв согласия
                 </h2>
                 <p className="text-body mb-6">
-                  Отзыв возможен через email Оператора
+                  Я уведомлен(а), что могу отозвать согласие путем направления обращения на email Оператора: anna.marinina00@mail.ru
                 </p>
 
                 <h2 className="font-[var(--font-unbounded)] text-xl font-medium mt-10 mb-4">
-                  8. Подтверждение
+                  8. Подтверждение согласия
                 </h2>
                 <p className="text-body mb-6">
                   Я подтверждаю, что:
@@ -110,9 +114,10 @@ export default function ConsentPage() {
                   <Link href="/privacy" className="underline underline-offset-4 decoration-1 decoration-primary/60 hover:decoration-primary transition-all">
                     Политикой обработки персональных данных
                   </Link>
-                  <br />— согласен(на) с условиями
+                  <br />— согласен(на) с условиями обработки
                   <br />— предоставляю достоверные данные
                 </p>
+              </div>
               </div>
             </FadeIn>
           </div>

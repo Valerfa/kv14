@@ -12,9 +12,9 @@ export default function NotFound() {
       />
       <div className="absolute inset-0 bg-black/40" />
 
-      <section className="relative z-10 min-h-screen flex items-center justify-center py-8 md:py-12">
-        <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:max-w-[1600px] 2xl:mx-auto w-full">
-          <div className="flex flex-col items-center justify-center text-center gap-4">
+      <section className="relative z-10 flex min-h-screen flex-col px-4 md:px-0 py-12 md:py-20">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-1 flex-col items-center justify-center pt-20 text-center">
+          <div className="flex flex-col items-center justify-center gap-4">
             <h1 className="title-section text-beige">404</h1>
             <p className="text-body text-beige/90">Страница не найдена</p>
             <p className="text-subtitle text-beige/80">
@@ -22,7 +22,7 @@ export default function NotFound() {
             </p>
             <Link
               href="/"
-              className="mt-4 inline-flex items-center justify-center border border-beige px-8 py-3 text-subtitle text-beige transition-colors hover:bg-beige hover:text-black"
+              className="mt-4 inline-flex cursor-pointer items-center justify-center border border-beige px-8 py-3 text-subtitle text-beige transition-colors hover:bg-beige hover:text-black"
             >
               Вернуться на главную
             </Link>

@@ -1,5 +1,7 @@
 "use client";
 
+import { cn } from "@/lib/utils";
+
 type CueOpenButtonProps = {
   className: string;
   children: React.ReactNode;
@@ -20,7 +22,7 @@ export function CueOpenButton({
           (window as any).cqOpenDef_wcmovccfzx0002kyu4b2970se7?.();
         }
       }}
-      className={className}
+      className={cn("cursor-pointer", className)}
     >
       {children}
     </button>
