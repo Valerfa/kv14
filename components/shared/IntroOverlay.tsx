@@ -5,24 +5,37 @@ import { usePathname } from "next/navigation";
 
 export function IntroOverlay() {
   const pathname = usePathname();
-  const [mounted, setMounted] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
+  const [shouldRender, setShouldRender] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    if (pathname !== "/") return;
 
-  useEffect(() => {
-    if (!mounted || pathname !== "/") return;
+    let hideTimer: ReturnType<typeof setTimeout> | undefined;
+    let firstFrame = 0;
+    let secondFrame = 0;
 
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-    }, 600);
+    firstFrame = requestAnimationFrame(() => {
+      secondFrame = requestAnimationFrame(() => {
+        if (window.scrollY > 0) return;
 
-    return () => clearTimeout(timer);
-  }, [mounted, pathname]);
+        setShouldRender(true);
+        setIsVisible(true);
 
-  if (!mounted || pathname !== "/") return null;
+        hideTimer = setTimeout(() => {
+          setIsVisible(false);
+        }, 600);
+      });
+    });
+
+    return () => {
+      cancelAnimationFrame(firstFrame);
+      cancelAnimationFrame(secondFrame);
+      if (hideTimer) clearTimeout(hideTimer);
+    };
+  }, [pathname]);
+
+  if (pathname !== "/" || !shouldRender) return null;
 
   return (
     <div

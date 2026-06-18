@@ -13,6 +13,10 @@ const photos = [
   "/images/photo8.webp",
   "/images/photo9.webp",
   "/images/photo10.webp",
+  "/images/photo11.webp",
+  "/images/photo12.webp",
+  "/images/photo13.webp",
+  "/images/photo14.webp",
 ];
 
 export function ShotInStudio() {
