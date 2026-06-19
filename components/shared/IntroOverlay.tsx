@@ -44,9 +44,26 @@ export function IntroOverlay() {
       }`}
       aria-hidden
     >
-      <span className="text-primary font-medium tracking-tight text-[clamp(24px,6vw,800px)] uppercase">
-        Квартира 14
-      </span>
+      <div className="text-center px-2 md:hidden">
+        <p className="text-2xl text-beige">
+          Фотостудия
+          <br />
+          в центре Владимира
+        </p>
+
+        <span className="block text-5xl uppercase font-normal tracking-wide leading-none text-primary mt-3">
+          Квартира 14
+        </span>
+      </div>
+
+      <div className="hidden md:block text-center">
+        <p className="text-[clamp(24px,2vw,200px)] text-beige uppercase mb-3">
+          Фотостудия в центре Владимира
+        </p>
+        <span className="block text-[clamp(24px,6vw,800px)] uppercase text-primary">
+          КВАРТИРА 14
+        </span>
+      </div>
     </div>
   );
 }

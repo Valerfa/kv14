@@ -7,7 +7,7 @@ export function Hero2() {
     <section className="relative min-h-screen w-full overflow-hidden bg-beige text-black">
       <div className="relative w-full h-screen overflow-hidden md:hidden">
         <Image
-          src="/images/image4.webp"
+          src="/images/hero_image_mobile.webp"
           alt="Фотостудия Квартира 14"
           fill
           className="w-full h-full object-cover"
@@ -30,7 +30,7 @@ export function Hero2() {
 
       <div className="relative hidden md:block h-screen w-full overflow-hidden">
         <Image
-          src="/images/image4.webp"
+          src="/images/hero_image_desktop.webp"
           alt="Фотостудия Квартира 14"
           fill
           priority

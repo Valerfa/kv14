@@ -21,7 +21,7 @@ export function FavArea() {
 
             <div className="col-span-3 col-start-2 md:col-span-4 md:col-start-5 3xl:col-span-2 3xl:col-start-6 my-2 md:my-6 xl:my-8 2xl:my-10">
               <Image
-                src="/images/image2.jpg"
+                src="/images/image2.webp"
                 alt="Пространство с проёмами в студии"
                 width={1200}
                 height={900}

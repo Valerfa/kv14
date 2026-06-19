@@ -18,11 +18,6 @@ const rentSlides = [
   "/images/image10.webp",
   "/images/image11.webp",
   "/images/image12.webp",
-  "/images/image13.webp",
-  "/images/image14.webp",
-  "/images/image15.webp",
-  "/images/image16.webp",
-
 ];
 
 export function Rent() {

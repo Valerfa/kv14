@@ -6,7 +6,7 @@ export default function NotFound() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/image14.webp')",
+          backgroundImage: "url('/images/image12.webp')",
           filter: "grayscale(100%)",
         }}
       />
