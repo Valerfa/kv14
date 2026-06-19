@@ -103,14 +103,14 @@ export function Rent() {
           <div className="flex flex-col md:flex-row gap-4">
           <div className="w-1/2 h-[200px] md:h-[400px] lg:h-[500px] xl:h-[600px] overflow-hidden hidden md:block">
               <Image
-                src="/images/image3.webp"
+                src="/images/image6.webp"
                 alt="Фотостудия Квартира 14"
                 width={1200}
                 height={900}
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="w-full md:w-1/2 h-[350px] md:h-[550px] lg:h-[600px] xl:h-[800px]">
+            <div className="w-full md:w-1/2 h-[480px] md:h-[550px] lg:h-[600px] xl:h-[800px]">
               <div className="overflow-hidden w-full h-full">
                 <AnimatePresence mode="wait">
                   <motion.div

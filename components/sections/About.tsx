@@ -40,7 +40,7 @@ export function About() {
 
             <div className="col-span-3 col-start-2 md:col-span-4 md:col-start-5 3xl:col-span-2 3xl:col-start-6 my-2 md:my-6 xl:my-8 2xl:my-10">
               <Image
-                src="/images/image11.webp"
+                src="/images/image1.webp"
                 alt="Фотостудия Квартира 14"
                 width={300}
                 height={300}
