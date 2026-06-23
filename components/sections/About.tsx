@@ -31,20 +31,20 @@ export function About() {
       <div className="">
         <FadeIn className="">
           <div className="grid grid-cols-4 md:grid-cols-12">
-            <div className="col-span-4 md:col-span-6 md:col-start-4 text-left md:text-center mb-4 md:mb-6 lg:mb-8 xl:mb-12 2xl:mb-16">
+            <div className="col-span-4 md:col-span-6 md:col-start-4 text-left md:text-center">
               <p className="subtitle mb-2">/ О нас</p>
               <h2 className="title-section leading-[1.05]">
                 СТУДИЯ, ГДЕ ПРОСТРАНСТВО НЕ ОТВЛЕКАЕТ — А РАСКРЫВАЕТ
               </h2>
             </div>
 
-            <div className="col-span-3 col-start-2 md:col-span-4 md:col-start-5 3xl:col-span-2 3xl:col-start-6 my-2 md:my-6 xl:my-8 2xl:my-10">
+            <div className="col-span-3 col-start-2 md:col-span-4 md:col-start-5 3xl:col-span-2 3xl:col-start-6 my-2 md:my-6 xl:my-8 3xl:my-10">
               <Image
-                src="/images/image1.webp"
+                src="/images/image5.webp"
                 alt="Фотостудия Квартира 14"
                 width={300}
                 height={300}
-                className="w-1/2 md:w-full h-[200px] h-[200px] md:h-[400px] lg:h-[500px] xl:h-[600px] object-cover"
+                className="w-1/2 md:w-full h-[200px] h-[200px] md:h-[400px] lg:h-[500px] xl:h-[600px] object-cover object-top"
                 priority={false}
               />
             </div>

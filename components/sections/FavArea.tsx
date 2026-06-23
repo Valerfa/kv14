@@ -19,13 +19,13 @@ export function FavArea() {
               </p>
             </div>
 
-            <div className="col-span-3 col-start-2 md:col-span-4 md:col-start-5 3xl:col-span-2 3xl:col-start-6 my-2 md:my-6 xl:my-8 2xl:my-10">
+            <div className="col-span-3 col-start-2 md:col-span-4 md:col-start-5 3xl:col-span-2 3xl:col-start-6 my-2 md:my-6 xl:my-8 3xl:my-10">
               <Image
-                src="/images/image2.webp"
+                src="/images/image9.webp"
                 alt="Пространство с проёмами в студии"
                 width={1200}
                 height={900}
-                className="w-1/2 md:w-full h-[200px] md:h-[400px] lg:h-[500px] xl:h-[600px] object-cover"
+                className="w-1/2 md:w-full h-[200px] md:h-[400px] lg:h-[500px] xl:h-[600px] object-cover object-top"
               />
             </div>
 

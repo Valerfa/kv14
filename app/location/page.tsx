@@ -31,13 +31,13 @@ export default function LocationPage() {
             </Link>
             <h1 className="title-section text-left">Как нас найти</h1>
 
-            <div className="mt-4 mb-8 md:mb-10">
+            <div className="mt-4">
               <p className="text-body text-left">
                 Мы находимся в центре Владимира, рядом с Торговыми рядами
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+            <div className="my-2 grid grid-cols-1 gap-4 md:my-6 md:grid-cols-3 md:gap-6 xl:my-8 3xl:my-10">
               {locationPhotos.map((src, index) => (
                 <div key={src} className="grid grid-cols-4 md:block">
                   <div className="col-start-2 col-span-3 md:contents overflow-hidden lg">
@@ -60,7 +60,7 @@ export default function LocationPage() {
             <div className="mt-8 grid grid-cols-4 md:block">
               <div className="col-start-2 col-span-3 md:contents">
                 <a
-                  href="https://yandex.ru/maps/?rtext=~56.129057,40.406635&rtt=auto"
+                  href="https://yandex.ru/maps/?rtext=~%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%2C%20%D1%83%D0%BB.%20%D0%98%D0%BB%D1%8C%D0%B8%D1%87%D0%B0%2C%204&rtt=auto"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex text-body items-center justify-center full border border-primary px-8 py-3 text-sm hover:opacity-90 transition-opacity"

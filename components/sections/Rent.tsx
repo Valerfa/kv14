@@ -103,7 +103,7 @@ export function Rent() {
           <div className="flex flex-col md:flex-row gap-4">
           <div className="w-1/2 h-[200px] md:h-[400px] lg:h-[500px] xl:h-[600px] overflow-hidden hidden md:block">
               <Image
-                src="/images/image6.webp"
+                src="/images/image3.webp"
                 alt="Фотостудия Квартира 14"
                 width={1200}
                 height={900}
