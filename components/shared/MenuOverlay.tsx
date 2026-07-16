@@ -86,7 +86,7 @@ export function MenuOverlay({ isOpen, onClose, links }: MenuOverlayProps) {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://vk.com/kv014"
                   onClick={onClose}
                   className="inline-flex transition-opacity duration-200 hover:opacity-70"
                   aria-label="VK"

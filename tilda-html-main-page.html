@@ -1,0 +1,741 @@
+<!--
+  KV14 Tilda HTML starter.
+
+  How to use:
+  1. In Tilda add block T123 "HTML code".
+  2. First paste the COMMON CSS + JS block.
+  3. Then paste sections one by one into separate T123 blocks.
+
+  Important:
+  Paths like /images/image1.webp work only if the same files exist on the Tilda site root.
+  In Tilda you will usually need to upload images and replace src="/images/..."
+  with Tilda file URLs.
+-->
+
+<!-- =========================
+COMMON CSS + JS
+Paste once near the top of the page
+========================= -->
+<style>
+  :root {
+    --kv-primary: #423428;
+    --kv-primary-light: #776C61;
+    --kv-black: #4B331F;
+    --kv-beige: #F7F2E5;
+    --kv-beige-secondary: #F4EDD3;
+  }
+
+  .kv14, .kv14 * {
+    box-sizing: border-box;
+  }
+
+  .kv14 {
+    margin: 0;
+    color: var(--kv-primary);
+    font-family: Montserrat, Arial, sans-serif;
+    line-height: 1;
+  }
+
+  .kv-section {
+    padding: 40px 16px;
+  }
+
+  .kv-section--beige {
+    background: var(--kv-beige);
+    color: var(--kv-primary);
+  }
+
+  .kv-section--brown {
+    background: var(--kv-primary);
+    color: var(--kv-beige);
+  }
+
+  .kv-section--light-brown {
+    background: var(--kv-primary-light);
+    color: var(--kv-beige);
+  }
+
+  .kv-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .kv-kicker {
+    margin: 0 0 8px;
+    font-size: clamp(12px, 1.2vw, 28px);
+    line-height: 1.3;
+    opacity: .6;
+  }
+
+  .kv-title {
+    margin: 0;
+    font-size: clamp(24px, 2.4vw, 150px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .kv-text {
+    margin: 0;
+    font-size: clamp(16px, 1.4vw, 40px);
+    line-height: 1.1;
+    font-weight: 400;
+  }
+
+  .kv-media-gap {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .kv-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .kv-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    padding: 12px 32px;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .kv-section {
+      padding: 64px 32px;
+    }
+
+    .kv-grid {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    .kv-media-gap {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .kv-section {
+      padding: 112px 48px;
+    }
+
+    .kv-media-gap {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .kv-section {
+      padding-left: 96px;
+      padding-right: 96px;
+    }
+
+    .kv-media-gap {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  /* Hero */
+  .kv-hero {
+    position: relative;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    height: 100svh !important;
+    min-height: 100svh !important;
+    overflow: hidden;
+    background: var(--kv-beige);
+  }
+
+  .kv-hero__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .kv-hero__desktop {
+    display: none;
+  }
+
+  .kv-hero__shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+  }
+
+  .kv-hero__content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    color: var(--kv-beige);
+    text-align: center;
+  }
+
+  .kv-hero__subtitle {
+    margin: 0 0 12px;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .kv-hero__title {
+    margin: 0;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: .025em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    .kv-hero__mobile {
+      display: none;
+    }
+
+    .kv-hero__desktop {
+      display: block;
+    }
+
+    .kv-hero__shade {
+      background: rgba(0, 0, 0, .2);
+    }
+
+    .kv-hero__subtitle {
+      font-size: clamp(24px, 2vw, 200px);
+      text-transform: uppercase;
+    }
+
+    .kv-hero__title {
+      font-size: clamp(24px, 6vw, 800px);
+    }
+  }
+
+  /* Centered text + image sections */
+  .kv-center-head {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .kv-center-media {
+    grid-column: 2 / span 3;
+    height: 200px;
+  }
+
+  .kv-center-copy {
+    grid-column: 2 / span 3;
+    text-align: left;
+  }
+
+  @media (min-width: 768px) {
+    .kv-center-head {
+      grid-column: 4 / span 6;
+      text-align: center;
+    }
+
+    .kv-center-media {
+      grid-column: 5 / span 4;
+      height: 400px;
+    }
+
+    .kv-center-copy {
+      grid-column: 5 / span 4;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .kv-center-media {
+      height: 500px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .kv-center-media {
+      height: 600px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .kv-center-media {
+      grid-column: 6 / span 2;
+    }
+  }
+
+  /* Rent */
+  .kv-rent-meta {
+    grid-column: 2 / span 3;
+    margin-bottom: 24px;
+  }
+
+  .kv-rent-controls {
+    grid-column: 2 / span 3;
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  .kv-rent-stage {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .kv-rent-static {
+    display: none;
+  }
+
+  .kv-rent-slide {
+    height: 480px;
+    overflow: hidden;
+  }
+
+  .kv-rent-arrow {
+    border: 0;
+    background: transparent;
+    color: var(--kv-primary);
+    font-size: 38px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .kv-rent-meta {
+      grid-column: 1 / span 3;
+    }
+
+    .kv-rent-controls {
+      grid-column: 11 / span 2;
+      align-items: end;
+      justify-content: flex-end;
+    }
+
+    .kv-rent-stage {
+      flex-direction: row;
+    }
+
+    .kv-rent-static {
+      display: block;
+      width: 50%;
+      height: 550px;
+      overflow: hidden;
+    }
+
+    .kv-rent-slide {
+      width: 50%;
+      height: 550px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .kv-rent-static {
+      height: 600px;
+    }
+
+    .kv-rent-slide {
+      height: 800px;
+    }
+  }
+
+  /* Rules */
+  .kv-rule {
+    border-top: 1px solid rgba(66, 52, 40, .6);
+  }
+
+  .kv-rule:last-child {
+    border-bottom: 1px solid rgba(66, 52, 40, .6);
+  }
+
+  .kv-rule__button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 0;
+    border: 0;
+    background: transparent;
+    color: var(--kv-primary);
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .kv-rule__title {
+    font-size: clamp(18px, 1.6vw, 44px);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .kv-rule__content {
+    display: none;
+    padding: 0 0 20px 28px;
+  }
+
+  .kv-rule.is-open .kv-rule__content {
+    display: block;
+  }
+
+  /* Gallery */
+  .kv-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .kv-gallery__item {
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+  }
+
+  .kv-gallery__item:nth-child(3n+1) {
+    aspect-ratio: 1 / 1;
+  }
+
+  @media (min-width: 1024px) {
+    .kv-gallery {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  /* Cue */
+  .cq-widget-root .cq-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99980;
+    background: rgba(0, 0, 0, .45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+  }
+
+  .cq-widget-root .cq-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99981;
+    width: min(560px, 100vw);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: var(--kv-beige);
+    transform: translateX(100%);
+    transition: transform .3s ease;
+  }
+
+  .cq-widget-root.is-open .cq-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .cq-widget-root.is-open .cq-panel {
+    transform: translateX(0);
+  }
+
+  .cq-close {
+    margin: 12px 12px 8px auto;
+    border: 0;
+    background: transparent;
+    color: var(--kv-primary);
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  .cq-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+
+<script>
+  (function () {
+    window.kv14OpenCue = function () {
+      var root = document.getElementById("cq-widget-root");
+      if (!root) return;
+      root.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+    };
+
+    window.kv14CloseCue = function () {
+      var root = document.getElementById("cq-widget-root");
+      if (!root) return;
+      root.classList.remove("is-open");
+      document.body.style.overflow = "";
+    };
+
+    document.addEventListener("click", function (event) {
+      var ruleButton = event.target.closest("[data-kv-rule-button]");
+      if (ruleButton) {
+        var rule = ruleButton.closest(".kv-rule");
+        if (rule) rule.classList.toggle("is-open");
+      }
+
+      var rentButton = event.target.closest("[data-kv-rent]");
+      if (rentButton) {
+        var direction = rentButton.getAttribute("data-kv-rent");
+        var image = document.querySelector("[data-kv-rent-image]");
+        if (!image) return;
+
+        var slides = [
+          "/images/image1.webp",
+          "/images/image2.webp",
+          "/images/image4.webp",
+          "/images/image5.webp",
+          "/images/image6.webp",
+          "/images/image7.webp",
+          "/images/image8.webp",
+          "/images/image9.webp",
+          "/images/image10.webp",
+          "/images/image11.webp",
+          "/images/image12.webp"
+        ];
+
+        var current = Number(image.getAttribute("data-index") || "0");
+        var next = direction === "next"
+          ? (current + 1) % slides.length
+          : (current - 1 + slides.length) % slides.length;
+
+        image.setAttribute("data-index", String(next));
+        image.setAttribute("src", slides[next]);
+      }
+    });
+  })();
+</script>
+
+
+<!-- =========================
+BLOCK 01: Hero
+========================= -->
+<section class="kv14 kv-hero" style="height:100vh;min-height:100vh;">
+  <img class="kv-hero__image kv-hero__mobile" src="/images/hero_image_mobile.webp" alt="Фотостудия Квартира 14">
+  <img class="kv-hero__image kv-hero__desktop" src="/images/hero_image_desktop.webp" alt="Фотостудия Квартира 14">
+  <div class="kv-hero__shade"></div>
+  <div class="kv-hero__content">
+    <div>
+      <p class="kv-hero__subtitle">Фотостудия<br class="kv-hero__mobile"> в центре Владимира</p>
+      <h1 class="kv-hero__title">Квартира 14</h1>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+BLOCK 02: About
+========================= -->
+<section class="kv14 kv-section kv-section--brown">
+  <div class="kv-grid">
+    <div class="kv-center-head">
+      <p class="kv-kicker">/ О нас</p>
+      <h2 class="kv-title">СТУДИЯ, ГДЕ ПРОСТРАНСТВО НЕ ОТВЛЕКАЕТ — А РАСКРЫВАЕТ</h2>
+    </div>
+    <div class="kv-center-media kv-media-gap">
+      <img class="kv-image" src="/images/image5.webp" alt="Фотостудия Квартира 14" style="object-position: top;">
+    </div>
+    <div class="kv-center-copy">
+      <p class="kv-text">Здесь свет живёт в течение дня, медленно проходя через комнаты, ложится на стены, паркет, линии дверных проёмов.</p>
+      <p class="kv-text" style="margin-top: 24px;">//</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+BLOCK 03: Rent
+========================= -->
+<section class="kv14 kv-section kv-section--beige" id="rent">
+  <div class="kv-grid">
+    <div class="kv-center-head">
+      <p class="kv-kicker">/ Аренда</p>
+      <h2 class="kv-title">СТУДИЯ ДОСТУПНА ДЛЯ БРОНИРОВАНИЯ ПО ЧАСАМ</h2>
+    </div>
+  </div>
+
+  <div class="kv-grid" style="margin: 24px 0;">
+    <div class="kv-rent-meta">
+      <p class="kv-text" style="margin-bottom: 8px;">1800 / час</p>
+      <div class="kv-text" style="opacity: .6;">
+        <p style="margin: 0 0 4px;">44 м² пространства</p>
+        <p style="margin: 0;">Потолки 3,5 м</p>
+      </div>
+      <button class="kv-button" style="margin-top: 24px;" onclick="window.kv14OpenCue()">Забронировать</button>
+    </div>
+
+    <div class="kv-rent-controls">
+      <button class="kv-rent-arrow" data-kv-rent="prev" aria-label="Предыдущий слайд">←</button>
+      <button class="kv-rent-arrow" data-kv-rent="next" aria-label="Следующий слайд">→</button>
+    </div>
+  </div>
+
+  <div class="kv-rent-stage">
+    <div class="kv-rent-static">
+      <img class="kv-image" src="/images/image3.webp" alt="Фотостудия Квартира 14">
+    </div>
+    <div class="kv-rent-slide">
+      <img class="kv-image" data-kv-rent-image data-index="0" src="/images/image1.webp" alt="Аренда студии">
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+BLOCK 04: Favorite Area
+========================= -->
+<section class="kv14 kv-section kv-section--beige">
+  <div class="kv-grid">
+    <div class="kv-center-head">
+      <p class="kv-kicker">/ Проёмы</p>
+    </div>
+    <div class="kv-center-copy">
+      <p class="kv-text">Одно из самых любимых мест в студии — пространство с проёмами, где взгляд мягко уходит вглубь. Здесь появляется ощущение ритма и воздуха</p>
+    </div>
+    <div class="kv-center-media kv-media-gap">
+      <img class="kv-image" src="/images/image9.webp" alt="Пространство с проёмами в студии" style="object-position: top;">
+    </div>
+    <div class="kv-center-copy">
+      <p class="kv-text">Это место, в котором не нужно искать композицию. Она уже есть.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+BLOCK 05: Events
+========================= -->
+<section class="kv14 kv-section kv-section--light-brown">
+  <div class="kv-grid">
+    <div class="kv-center-head">
+      <p class="kv-kicker">/ Аренда для мероприятий</p>
+      <h2 class="kv-title">ПРОСТРАНСТВО ПОДХОДИТ<br>НЕ ТОЛЬКО ДЛЯ СЪЁМОК</h2>
+    </div>
+    <div class="kv-center-copy" style="margin-top: 24px;">
+      <p class="kv-text">Здесь можно проводить камерные встречи: консультации, женские круги, небольшие девичники — в спокойной и бережной атмосфере.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+BLOCK 06: Rules
+========================= -->
+<section class="kv14 kv-section kv-section--beige" id="rules">
+  <div class="kv-grid">
+    <div class="kv-center-head" style="margin-bottom: 48px;">
+      <p class="kv-kicker">/ Правила студии</p>
+      <h2 class="kv-title">ВАЖНО ПЕРЕД СЪЁМКОЙ</h2>
+    </div>
+  </div>
+
+  <div class="kv-rules">
+    <div class="kv-rule is-open">
+      <button class="kv-rule__button" data-kv-rule-button><span class="kv-kicker">/ 01</span><span class="kv-rule__title">Бронирование и оплата</span><span>+</span></button>
+      <div class="kv-rule__content"><p class="kv-text">Бронирование осуществляется через сайт или по телефону. Предоплата 50% при бронировании оставшаяся сумма оплачивается на месте</p></div>
+    </div>
+    <div class="kv-rule">
+      <button class="kv-rule__button" data-kv-rule-button><span class="kv-kicker">/ 02</span><span class="kv-rule__title">Отмена бронирования</span><span>+</span></button>
+      <div class="kv-rule__content"><p class="kv-text">Возврат средств осуществляется при отмене бронирования за 72 часа. Перенос брони возможен так же, как и отмена — за 72 часа до начала съёмки. В случае отмены за меньший срок предоплата возврату не подлежит.</p></div>
+    </div>
+    <div class="kv-rule">
+      <button class="kv-rule__button" data-kv-rule-button><span class="kv-kicker">/ 03</span><span class="kv-rule__title">Время аренды</span><span>+</span></button>
+      <div class="kv-rule__content"><p class="kv-text">Минимальное время аренды 1 час. При этом 5 минут до окончания брони отводится на уборку помещения.</p></div>
+    </div>
+    <div class="kv-rule">
+      <button class="kv-rule__button" data-kv-rule-button><span class="kv-kicker">/ 04</span><span class="kv-rule__title">Время работы</span><span>+</span></button>
+      <div class="kv-rule__content"><p class="kv-text">Фотостудия работает ежедневно с 9:00 до 21:00. Аренда в ночное время обсуждается отдельно.</p></div>
+    </div>
+    <div class="kv-rule">
+      <button class="kv-rule__button" data-kv-rule-button><span class="kv-kicker">/ 05</span><span class="kv-rule__title">Ограничения</span><span>+</span></button>
+      <div class="kv-rule__content"><p class="kv-text">Запрещается наклеивать на стены и пол клейкую ленту, а также использовать хлопушки, блестки, конфетти. В студии запрещено курение, употребление спиртных напитков и наркотических веществ.</p></div>
+    </div>
+    <div class="kv-rule">
+      <button class="kv-rule__button" data-kv-rule-button><span class="kv-kicker">/ 06</span><span class="kv-rule__title">Оборудование</span><span>+</span></button>
+      <div class="kv-rule__content"><p class="kv-text">В нашем пространстве качественный постоянный студийный свет Aputure Amaran Halo 200x, а также насадки к нему: рефлектор, сфера, софтбокс с сотами.</p></div>
+    </div>
+  </div>
+
+  <div class="kv-grid" style="margin-top: 16px;">
+    <div class="kv-center-copy">
+      <p class="kv-text" style="color: var(--kv-primary-light);">С полным сводом правил можно ознакомиться по <a href="/rules" style="color: inherit; text-decoration: underline;">ссылке</a>.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+BLOCK 07: Shot In Studio
+========================= -->
+<section class="kv14 kv-section kv-section--beige">
+  <div class="kv-grid">
+    <div class="kv-center-head">
+      <p class="kv-kicker">/ Снимки</p>
+      <h2 class="kv-title">Снято в нашей студии</h2>
+    </div>
+  </div>
+  <div class="kv-gallery">
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo1.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo2.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo3.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo4.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo5.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo6.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo7.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo8.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo9.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo10.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo11.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo12.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo13.webp" alt=""></div>
+    <div class="kv-gallery__item"><img class="kv-image" src="/images/photo14.webp" alt=""></div>
+  </div>
+</section>
+
+
+<!-- =========================
+BLOCK 08: Footer
+========================= -->
+<footer class="kv14 kv-section kv-section--brown">
+  <div class="kv-grid" style="gap: 32px;">
+    <div style="grid-column: span 4;">
+      <h2 class="kv-title">Квартира 14</h2>
+    </div>
+    <div style="grid-column: span 4;">
+      <p class="kv-kicker">Контакты</p>
+      <p class="kv-text">+7 (904) 251-66-91</p>
+      <p class="kv-text" style="margin-top: 12px;"><a href="https://vk.com/kv014" target="_blank" style="color: inherit;">https://vk.com/kv014</a></p>
+      <p class="kv-text" style="margin-top: 12px;"><a href="https://www.instagram.com/kvartira.014" target="_blank" style="color: inherit;">@kvartira.014</a></p>
+    </div>
+    <div style="grid-column: span 4;">
+      <p class="kv-kicker">Адрес</p>
+      <p class="kv-text">г. Владимир, ул. Ильича, д. 4</p>
+      <p class="kv-text" style="opacity: .6;">(за Торговыми рядами)</p>
+    </div>
+  </div>
+  <p style="margin: 32px 0 0; font-size: 12px; color: rgba(247,242,229,.6); max-width: 520px;">*Социальная сеть Instagram принадлежит Meta Platforms Inc., деятельность которой признана экстремистской и запрещена на территории РФ.</p>
+  <p style="margin: 32px 0 0; font-size: 16px; color: rgba(247,242,229,.8);">© Квартира 14, 2026. Все права защищены</p>
+</footer>
+
+
+<!-- =========================
+BLOCK 09: Cue Popup
+Paste once anywhere on the page
+========================= -->
+<div id="cq-widget-root" class="cq-widget-root">
+  <div class="cq-overlay" onclick="window.kv14CloseCue()"></div>
+  <div class="cq-panel">
+    <button class="cq-close" type="button" onclick="window.kv14CloseCue()" aria-label="Закрыть">×</button>
+    <iframe title="Cue booking widget" src="https://kvartira14.cue.business/services" class="cq-iframe" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+</div>

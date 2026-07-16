@@ -61,7 +61,7 @@ export function CueWidget() {
         </button>
         <iframe
           title="Cue booking widget"
-          src="https://3810.cue.business"
+          src="https://kvartira14.cue.business/services"
           className="cq-iframe"
           referrerPolicy="strict-origin-when-cross-origin"
         />
